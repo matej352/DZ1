@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private Button button;
+    private boolean flag = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +21,14 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.btn1);
 
         button.setOnClickListener((v) -> {
-            if (button.getText().equals("Hide")) {
+            if (flag) {
                 textView.setVisibility(View.INVISIBLE);
                 button.setText(R.string.show);
             } else {
                 textView.setVisibility(View.VISIBLE);
                 button.setText(R.string.hide);
             }
+            flag = !flag;
         });
 
     }
