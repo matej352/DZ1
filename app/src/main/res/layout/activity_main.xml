@@ -20,9 +20,9 @@
         android:layout_height="wrap_content"
         android:text="@string/hide"
         android:id="@+id/btn1"
-        android:layout_below="@id/txt1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="260dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
         android:visibility="visible"
         />
 
